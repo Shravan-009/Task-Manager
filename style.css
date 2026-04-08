@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#1e3c72,#2a5298);
+}
+
+/* Container */
+.container{
+    width:100%;
+    max-width:800px;
+    background:#ffffff;
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+header h1{
+    font-size:28px;
+    font-weight:600;
+    color:#2a2a2a;
+    letter-spacing:1px;
+}
+
+/* Input Section */
+.input-section{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+}
+
+.input{
+    flex:1;
+    height:45px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:0 15px;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+.input:focus{
+    border-color:#2a5298;
+    box-shadow:0 0 0 3px rgba(42,82,152,0.2);
+}
+
+/* Buttons */
+.btn{
+    height:45px;
+    padding:0 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn-add{
+    background:#2a5298;
+    color:white;
+}
+
+.btn-add:hover{
+    background:#1e3c72;
+}
+
+.btn-success{
+    background:#28a745;
+    color:white;
+}
+
+.btn-success:hover{
+    background:#1e7e34;
+}
+
+.btn-error{
+    background:#dc3545;
+    color:white;
+}
+
+.btn-error:hover{
+    background:#b02a37;
+}
+
+/* Filter Section */
+.todos-filter,
+.filters{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:15px 0;
+}
+
+/* Todo List */
+.todos-list{
+    margin-top:10px;
+    max-height:400px;
+    overflow-y:auto;
+    padding-right:5px;
+}
+
+.todos-list::-webkit-scrollbar{
+    width:6px;
+}
+
+.todos-list::-webkit-scrollbar-thumb{
+    background:#ccc;
+    border-radius:10px;
+}
+
+/* Todo Item */
+.todo-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f8f9fa;
+    padding:12px 15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.todo-item:hover{
+    transform:translateY(-2px);
+}
+
+.todo-item p{
+    font-size:15px;
+    color:#333;
+}
+
+.todo-actions{
+    display:flex;
+    gap:8px;
+}
+
+/* Completed Task */
+.line{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+/* Dropdown */
+.dropdown{
+    position:relative;
+}
+
+.dropbtn{
+    background:#2a5298;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    right:0;
+    background:white;
+    min-width:150px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    color:#333;
+    transition:0.3s;
+}
+
+.dropdown-content a:hover{
+    background:#f1f1f1;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    .container{
+        width:95%;
+        padding:20px;
+    }
+
+    .input-section{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+}

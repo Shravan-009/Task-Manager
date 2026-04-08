@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  task-manager:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - MONGO_URI=mongodb+srv://shravanchavan01_db_user:H7NzC4Ppo40Uaika@taskmanager.c0dcioq.mongodb.net/?appName=taskmanager
+    restart: unless-stopped
